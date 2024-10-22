@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+#balloon {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%; /* Make it round */
+    transition: all 0.2s; /* Smooth transitions for size and color */
+    cursor: pointer; /* Change cursor to pointer */
+}
