@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Resume</title>
+    <style>
+        /* Basic styling for the body, including background color and font */
+        body {
+            font-family: "Oswald", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        /* Navigation bar styling */
+        nav {
+            position: fixed; /* Fixed position at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #6152c2; /* Background color of nav */
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            z-index: 1000; /* Ensures it stays on top */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+        nav ul {
+            list-style-type: none; /* Removes default list styling */
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline; /* Displays list items in a row */
+            margin-right: 20px; /* Spacing between items */
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none; /* Removes underline from links */
+            font-weight: bold; /* Makes links bold */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+        nav ul li a:hover {
+            color: #292725; /* Color change on hover */
+        }
+        /* Styling for each section of the page */
+        section {
+            display: none; /* Hide all sections by default */
+            padding: 60px 20px;
+            margin-top: 50px; /* Space from the nav */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #ffffff; /* Section background color */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+        .active {
+            display: block; /* Show the active section */
+        }
+        .section-header {
+            margin-top: 20px;
+            font-size: 28px; /* Size of section headers */
+            color: #000000; /* Color of section headers */
+            text-align: center; /* Center header */
+        }
+        h3 {
+            color: #555; /* Color for sub-headers */
+        }
+        img {
+            border-radius: 8px; /* Rounded corners for images */
+            margin-bottom: 20px; /* Space below images */
+        }
+        ul {
+            padding-left: 20px; /* Indentation for list items */
+        }
+        ul li {
+            margin-bottom: 10px; /* Space between list items */
+        }
+        .home-content {
+            font-size: 24px; /* Larger font for home content */
+            line-height: 1.5; /* Improved line height for readability */
+            text-align: center; /* Center text */
+        }
+        /* Add background to the home section */
+        #home {
+            background: linear-gradient(to right,#6152c2, #f5f5f5);
+            text-align: center; /* Center text */
+        }
+        .profile-cards {
+            display: flex;
+            justify-content: center; /* Center cards */
+            gap: 20px; /* Space between cards */
+            margin-top: 20px;
+        }
+        .profile-card {
+            background-color: #ffffff; /* Card background */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px;
+            width: 200px; /* Fixed width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            cursor: pointer; /* Pointer on hover */
+            transition: transform 0.3s; /* Animation effect */
+        }
+        .profile-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+        .profile-card h3 {
+            color: #1b0e70; /* Header color */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about1')">Pawaris</a></li>
+            <li><a href="#" onclick="showSection('about2')">Punnawat</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2 class="section-header">Welcome</h2>
+        <p class="home-content">Choose a profile below to learn more about each individual’s background, experiences, and contact information.</p>
+        <div class="profile-cards">
+            <div class="profile-card" onclick="showSection('about1')">
+                <img src="/home/psareewo/Downloads/IMG_6659.webp"width="170">
+                <h3>Pawaris Sareewong</h3>
+                <p>Click to learn more about Pawaris</p>
+            </div>
+            <div class="profile-card" onclick="showSection('about2')">
+                <img src="/home/psareewo/Downloads/image.webp" width="170">
+                <h3>Punnawat Chaiyawan</h3>
+                <p>Click to learn more about Punnawat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************************************************************ -->
+
+    <!-- Profile Section for Pawares -->
+    <section id="about1">
+        <h2 class="section-header">About Pawaris</h2>
+        <img src="/home/psareewo/Downloads/IMG_6659.webp" alt="Pawaris Photo" width="170">
+        <h3>Full Name: Pawaris Sareewong</h3>
+        <h3>Nickname: Flint</h3>
+        <p>Job Title: Student</p>
+
+        <h3>Hobby</h3>
+        <p>Pawaris like play foot ball when he have free time</p>
+
+        <h3>Contact Me</h3>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email: <a href="mailto:pawaris.fl@gmail.com">pawaris.fl@gmail.com</a></li>
+            <li>Line ID: <a href="https://linkedin.com/in/yourprofile">pawaris_fl</a></li>
+        </ul>
+    </section>
+
+    <!-- ************************************************************************************ -->
+
+    <!-- Profile Section for Punnawat -->
+    <section id="about2">
+        <h2 class="section-header">About Punnawat</h2>
+        <img src="/home/psareewo/Downloads/image.webp" alt="Punnawat Photo" width="170">
+        <h3>Full Name:Punnawat Chaiyawan</h3>
+        <h3>Nickname: Pun</h3>
+        <p>Job Title: Student</p>
+
+        <h3>Hobby</h3>
+        <p>Punnawat like play basketball when he have free time</p>
+
+        <h3>Contact Me</h3>
+        <p>You can reach me at:</p>
+        <ul>
+            <li>Email: <a href="mailto:punchaiyawan@gmail.com">punchaiyawan@gmail.com</a></li>
+            <li>Line ID: <a href="https://linkedin.com/in/yourprofile">kaopod555</a></li>
+        </ul>
+    </section>
+
+    <script>
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active'); // Remove 'active' class to hide
+            });
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active'); // Add 'active' class to show
+        }
+    </script>
+
+</body>
+</html>
